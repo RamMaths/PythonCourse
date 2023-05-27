@@ -1,0 +1,27 @@
+from turtle import Turtle
+
+SIZE = 70
+
+class Player:
+    def __init__(self):
+        self.body=[Turtle()]
+        self.initial_body()
+
+
+    def initial_body(self):
+        y = -105
+        for i in range(3):
+            self.square_features(self.body[i])
+            self.body[i].goto(-430, y)
+            y += 70
+            self.body.append(Turtle())
+
+        self.body.pop(len(self.body)-1)
+
+    def square_features(self, square):
+        shape = SIZE * (0.05)
+        square.penup()
+        square.speed('slow')
+        square.shape('square')
+        square.color('white')
+        square.shapesize(stretch_wid=shape, stretch_len=shape)

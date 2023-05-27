@@ -1,0 +1,7 @@
+import tkinter
+
+window = tkinter.Tk()
+window.title("window")
+
+
+window.mainloop()

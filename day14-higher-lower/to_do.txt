@@ -1,0 +1,16 @@
+task 1 -----
+give two celebrities
+
+task 2 -----
+show the cases
+
+task 3 -----
+make the guess
+
+task 4 -----
+compare the guess with the correct answer
+
+task 5  -----
+if the player is right them the game continues else the game breaks
+
+

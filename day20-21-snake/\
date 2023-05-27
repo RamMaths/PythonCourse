@@ -1,0 +1,45 @@
+from turtle import Turtle
+
+class Snake:
+    def square_features(self, square):
+        square.penup()
+        square.speed('slow')
+        square.shape('square')
+        square.color('white')
+        square.shapesize(stretch_wid=0.5, stretch_len=0.5)
+
+    def add_square_on_x(self, tail):
+        last_square = len(tail)-1
+        x = tail[last_square].xcor()
+        x -= 10
+        tail.append(Turtle())
+        next_square = last_square + 1
+        self.square_features(tail[next_square])
+        tail[next_square].goto(x, 0)
+
+    def add_square_on_y(self, tail):
+        last_square = len(tail)-1
+        y = tail[last_square].ycor()
+        y -= 10
+        tail.append(Turtle())
+        next_square = last_square + 1
+        self.square_features(tail[next_square])
+        tail[next_square].goto(0, y)
+
+    def turn_left(self, segment):
+        segment.left(90)
+        segment.fd(10)
+
+    def move(slef, ):
+
+    while still_playing==True:
+        screen.update()
+        time.sleep(0.075)
+
+        # screen.listen()
+        # screen.onkey(fun=turn_left(tail[0]), key='Left')
+
+        for segment in range(len(tail)-1, 0, -1):
+            (new_x, new_y) = tail[segment-1].pos()
+            tail[segment].goto(new_x, new_y)
+        tail[0].fd(10)

@@ -1,0 +1,25 @@
+# pylint: disable=E1101
+import pandas
+import turtle
+
+screen = turtle.Screen()
+screen.title("U.S. States game")
+image = "blank_states_img.gif"
+screen.addshape(image)
+turtle.shape(image)
+
+#importing the satates and its location
+states = pandas.read_csv('50_states.csv')
+states_name_list = states['state'].to_list()
+
+# --- main ---
+
+correct_answers = 0
+while correct_answers < 50:
+    answer_state = answer_state.title()
+    answer_state = screen.textinput(title="Guess state", prompt="What's another state's name you know?")
+    if answer_state in states_name_list:
+        print("yes")
+        correct_answers+=1
+    else:
+        print("no")

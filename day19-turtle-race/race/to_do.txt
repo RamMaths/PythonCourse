@@ -1,0 +1,6 @@
+1 - ask the user for a color
+2 - give the colors
+3 - start position
+4 - start the race
+5 - finish the race 
+6 - give the results
